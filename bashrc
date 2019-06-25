@@ -44,7 +44,7 @@ alias df="df -h"
 alias du="du -h"
 alias last="last -a"
 alias free="free -m"
-alias lftp="lftp user:pwd@ftpip"
+#alias lftp="lftp user:pwd@ftpip"
 #alias ln="ln -s"
 
 alias ..="cd .."
