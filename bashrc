@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias cls='clear'
@@ -44,7 +43,7 @@ alias df="df -h"
 alias du="du -h"
 alias last="last -a"
 alias free="free -m"
-alias lftp="lftp user:pwd@ftpip"
+#alias lftp="lftp user:pwd@ftpip"
 #alias ln="ln -s"
 
 alias ..="cd .."
