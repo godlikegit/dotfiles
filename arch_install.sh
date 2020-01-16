@@ -1,4 +1,4 @@
-#dd if=/dev/zero of=/dev/sdb bs=512K count=1
+#dd if=/dev/zero of=/dev/sda bs=512K count=1
 
 #Partition the disks
 echo -e "n\n\n\n\n+1G\nn\n\n\n\n+8G\nn\n\n\n\n\nw\n" | fdisk /dev/sda
@@ -35,7 +35,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 
 #Localization
-vim /etc/locale.gen
+sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
@@ -48,7 +48,7 @@ echo "
 #vim /etc/vconsole.conf
 
 #Boot loader
-grub-install --target=i386-pc /dev/sda
+grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #fdisk a 3
