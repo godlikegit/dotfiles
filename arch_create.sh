@@ -20,15 +20,19 @@ cd /etc/pacman.d
 cp mirrorlist _mirrorlist
 cat _mirrorlist | grep China -A 1 | grep -v '-' > mirrorlist
 rm _mirrorlist
-cp mirrorlist /mnt/ect/pacman.d
 cd
 
 #Install essential packages
-pacstrap /mnt base linux linux-firmware vim grub dhcpcd wget
+pacstrap /mnt base linux linux-firmware vim grub dhcpcd
 
 #Fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #Chroot
-wget https://raw.githubusercontent.com/godlikegit/dotfiles/master/arch_init.sh /mnt
+wget raw.githubusercontent.com/godlikegit/dotfiles/master/arch_init.sh
+mv arch_init.sh /mnt
 arch-chroot /mnt /bin/bash /arch_init.sh
+rm /mnt/arch_init.sh
+
+umount /mnt
+reboot
