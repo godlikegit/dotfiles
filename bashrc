@@ -7,9 +7,10 @@
 
 PS1='[\u@\h \W]\$ '
 
+alias c='clear'
 alias cls='clear'
-alias ls='ls --color=auto'
-alias lsa='ls -a --color=auto'
+alias l='ls --color=auto'
+alias la='ls -a --color=auto'
 alias ll='ls -l --color=auto'
 alias lla='ls -la --color=auto'
 alias ld='ls -d --color=auto */'
@@ -44,7 +45,7 @@ alias df="df -h"
 alias du="du -h"
 alias free="free -m"
 alias g='git'
-alias grep="grep -rnE -color"
+#alias grep="grep -rnE -color"
 alias last="last -a"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
