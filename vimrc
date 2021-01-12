@@ -56,6 +56,7 @@ inoremap <leader>s <esc>:w<cr>
 nnoremap <silent> <leader>/ :nohls<CR>
 nnoremap <leader>wq :wq<cr> 
 nnoremap <leader>q :q<cr> 
+nnoremap <leader>Q :q!<cr>
 
 " 为了强迫使用自定义的快捷键而禁用一些默认按键
 "inoremap <esc> <nop>   "这个不能用，上下左右以及一些按键会输出控制字符
