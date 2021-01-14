@@ -1,6 +1,9 @@
-let mapleader=","
+let mapleader=','
+let g:mapleader=','
 set nocp
 set noswapfile
+
+" 映射一个查询快捷键是否被映射的指令
 
 " Tab related
 set ts=4
@@ -70,26 +73,24 @@ map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     silent exec "w"
     silent exec "!clear"
-    if &filetype == 'c'
-        silent exec "!g++ % -o %<"
-        exec "!time ./%<"
-    elseif &filetype == 'cpp'
-        silent exec "!g++ % -o %<"
-        exec "!time ./%<"
-    elseif &filetype == 'java' 
-        exec "!javac %" 
-        exec "!time java %<"
-    elseif &filetype == 'sh'
-        :!time bash %
-    elseif &filetype == 'python'
-        exec "!time python2.7 %"
-    elseif &filetype == 'html'
-        exec "!firefox % &"
-    elseif &filetype == 'go'
-        exec "!go build %<"
-        exec "!time go run %"
-    elseif &filetype == 'mkd'
-        exec "!~/.vim/markdown.pl % > %.html &"
-        exec "!firefox %.html &"
-    endif
+    silent exec "!g++ % -o %<"
+    exec "!time ./%<"
 endfunc
+
+map <F7> :call Compile()<CR>
+func! Compile()
+    silent exec "w"
+    silent exec "!clear"
+    exec "!g++ % -o %<"
+endfunc
+
+map <C-F5> :call Run()<CR>
+func! Run()
+    silent exec "!clear"
+    exec "!time ./%<"
+endfunc
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'mhinz/vim-startify'
+call plug#end()
