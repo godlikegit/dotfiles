@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ln -s ~/dotfiles/bash_login ~/.bash_login
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/vimrc ~/.vimrc
+ln -sf ~/dotfiles/bash/bashrc ~/.bash_login
+ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/vim/vimrc ~/.vimrc

@@ -1,5 +1,6 @@
 let mapleader=','
 let g:mapleader=','
+set pastetoggle=<F2>
 set nocp
 set noswapfile
 
@@ -73,7 +74,7 @@ map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     silent exec "w"
     silent exec "!clear"
-    silent exec "!g++ % -o %<"
+    silent exec "!g++ -fno-elide-constructors % -o %<"
     exec "!time ./%<"
 endfunc
 
@@ -81,7 +82,7 @@ map <F7> :call Compile()<CR>
 func! Compile()
     silent exec "w"
     silent exec "!clear"
-    exec "!g++ % -o %<"
+    exec "!g++ -fno-elide-constructors % -o %<"
 endfunc
 
 map <C-F5> :call Run()<CR>
@@ -90,7 +91,7 @@ func! Run()
     exec "!time ./%<"
 endfunc
 
-
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 call plug#end()
+

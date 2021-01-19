@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for config in aliases ; do
+  [[ -r $HOME/dotfiles/bash/$config ]] && . "$HOME/dotfiles/bash/$config"
+done
+unset config
+

@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# If not running interactively, don't do anything
+#[[ $- != *i* ]] && return
+
+# ls cd ps
+alias c='clear'
+alias l='ls --color=auto'
+alias la='ls -a --color=auto'
+alias ll='ls -l --color=auto'
+alias lal='ls -la --color=auto'
+alias ld='ls -d --color=auto */'
+alias ldl='ls -ld --color=auto */'
+alias ladl='ls -lad --color=auto */'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+#alias -- -="cd -"
+alias psg='ps ux|grep'
+alias psag='ps aux|grep'
+#alias grep="grep -rnE -color"
+#alias chmod="chmod -v --preserve-root"
+#alias chmod="chown -v --preserve-root"
+alias mkdir="mkdir -pv"
+alias cp="cp -v"
+alias cpr="cp -r"
+alias mv="mv -v"
+alias df="df -h"
+alias du="du -h"
+alias free="free -m"
+alias last="last -a"
+#alias lftp="lftp user:pwd@ftpip"
+#alias ln="ln -s"
+
+# systemctl
+alias stl='systemctl'
+alias stle='systemctl enable'
+alias stld='systemctl disable'
+alias stlre='systemctl reenable'
+alias stls='systemctl status'
+alias stlst='systemctl start'
+alias stlsp='systemctl stop'
+alias stlrst='systemctl restart'
+alias stlrld='systemctl reload'
+
+# tmux
+alias tu='tmux'
+alias tuls='tmux ls'
+alias tuks='tmux kill-server'
+alias tuk='tmux kill-session -t'
+alias tuka='tmux kill-session -a -t'
+alias tul='tmux attach'
+alias tua='tmux attach -t'
+alias tuc='tmux new -s'
+
+# git
+alias g='git'
+alias gst='git status'
+alias gad='git add'
+alias gco='git commit'
+alias gch='git checkout'
+alias gpu='git push'
+alias gpl='git pull'
+
+# find
+alias findf="find -type f -name"
+alias findd="find -type d -name"
+
+# edit configs
+alias vi='vim'
+alias vbash='vim ~/.bash_login'
+alias valias='vim ~/dotfiles/bash/aliases'
+alias vvim='vim ~/.vimrc'
+alias vtmux='vim ~/.tmux.conf'
+alias vgit='vim ~/.gitconfig'
+alias rlbash='. ~/.bash_login'
+
+
