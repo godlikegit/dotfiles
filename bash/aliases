@@ -9,9 +9,9 @@ alias l='ls --color=auto'
 alias la='ls -a --color=auto'
 alias ll='ls -l --color=auto'
 alias lal='ls -la --color=auto'
-alias ld='ls -d --color=auto */'
-alias ldl='ls -ld --color=auto */'
-alias ladl='ls -lad --color=auto */'
+alias ld='ls -d --color=auto'
+alias ldl='ls -ld --color=auto'
+alias ladl='ls -lad --color=auto'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
