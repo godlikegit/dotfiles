@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for config in aliases ; do
+for config in aliases func ; do
   [[ -r $HOME/dotfiles/bash/$config ]] && . "$HOME/dotfiles/bash/$config"
 done
 unset config

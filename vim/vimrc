@@ -10,8 +10,8 @@ set noswapfile
 set ts=4
 set sw=4
 set smarttab
-set et
-set ambiwidth=double
+"set expandtab
+"set ambiwidth=double
 
 " Format related
 set tw=78
@@ -57,10 +57,13 @@ set wrap
 inoremap jk <esc>
 "nnoremap ; :   "f的时候会需要用;重复查找
 inoremap <leader>s <esc>:w<cr>
-nnoremap <silent> <leader>/ :nohls<CR>
+"取消搜索高亮
+nnoremap <silent> <leader>/ :nohls<CR> 
 nnoremap <leader>wq :wq<cr> 
 nnoremap <leader>q :q<cr> 
 nnoremap <leader>Q :q!<cr>
+"切换自动换行
+nnoremap <leader>p :set wrap!<cr>
 
 " 为了强迫使用自定义的快捷键而禁用一些默认按键
 "inoremap <esc> <nop>   "这个不能用，上下左右以及一些按键会输出控制字符

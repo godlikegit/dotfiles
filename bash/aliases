@@ -74,9 +74,12 @@ alias findd="find -type d -name"
 alias vi='vim'
 alias vbash='vim ~/.bash_login'
 alias valias='vim ~/dotfiles/bash/aliases'
+alias vfunc='vim ~/dotfiles/bash/func'
 alias vvim='vim ~/.vimrc'
 alias vtmux='vim ~/.tmux.conf'
 alias vgit='vim ~/.gitconfig'
 alias rlbash='. ~/.bash_login'
 
-
+alias tj='tar -xzf'
+alias ty='tar -czf'
+alias tv='tar -tzvf'
